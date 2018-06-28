@@ -4,31 +4,31 @@
             "id": 1,
             "name": "Gerald",
             "billId": 4,
-            "pacId": 2
+            "pacId": [2]
         },
         {
             "id": 2,
             "name": "Ronaldo",
             "billId": 3,
-            "pacId": 1
+            "pacId": [1,5]
         },
         {
             "id": 3,
             "name": "Gruntilda",
             "billId": 1,
-            "pacId": 4
+            "pacId": [4,1,2]
         },
         {
             "id": 4,
             "name": "Harold",
             "billId": 3,
-            "pacId": 3
+            "pacId": [3,5]
         },
         {
             "id": 5,
             "name": "Sharon",
             "billId": 1,
-            "pacId": 2
+            "pacId": [2]
         }
     ],
     "LegislativeBill": [

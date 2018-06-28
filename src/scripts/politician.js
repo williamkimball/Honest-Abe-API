@@ -35,41 +35,40 @@ const politician = Object.create({}, {
                                 billPoint.textContent = element;
                                 billPointList.appendChild(billPoint)
                             });
-                                billDiv.appendChild(billHead)
-                                billDiv.appendChild(billPointList)
-                                billSection.appendChild(billDiv)
-                            })
+                            billDiv.appendChild(billHead)
+                            billDiv.appendChild(billPointList)
+                            billSection.appendChild(billDiv)
+                        })
                     politicianSection.appendChild(billSection)
                 } else if (key === "pacId") {
                     let pacSection = document.createElement("section")
 
                     pacSection.className = "politician__pacs"
+                    let pacHeading = document.createElement("h4")
+                    pacHeading.textContent = "Related PACs"
+                    pacSection.appendChild(pacHeading)
+                    politician[key].forEach(element => {
+                        // console.log(element)
 
-                    let pacs = databaseCollection.getPAC(politician[key])
-                        .then((response) => {
-                            // console.log(response)
-                            let pacHeading = document.createElement("h4")
-                            pacHeading.textContent = "Related PACs"
-                            pacSection.appendChild(pacHeading)
-                            let pacDiv = document.createElement("div")
-                            let pacName = document.createElement("h5")
-                            pacName.textContent = `${response["name"]}`
-                            console.log(pacName)
-                            let pacPointList = document.createElement("ul");
-                            let pacPointsLi = function () {
-                                return document.createElement("li");
-                            }
-                            let pacPoints = response["pacPoints"];
-                            // pacPoints.forEach(element => {
-                            //     let pacPoint = pacPointsLi()
-                            //     pacPoint.textContent = element;
-                            //     pacPointList.appendChild(pacPoint)
-                            // });
+                        let pacs = databaseCollection.getPAC(element)
+                            .then((response) => {
+                                // console.log(response)
+
+                                let pacDiv = document.createElement("div")
+                                let pacName = document.createElement("h5")
+                                pacName.textContent = `${response["name"]}`
+                                console.log(pacName)
+                                let pacPointList = document.createElement("ul");
+                                let pacPointsLi = function () {
+                                    return document.createElement("li");
+                                }
                                 pacDiv.appendChild(pacName)
                                 pacDiv.appendChild(pacPointList)
                                 pacSection.appendChild(pacDiv)
                             })
-                    politicianSection.appendChild(pacSection)
+                        politicianSection.appendChild(pacSection)
+                    }
+                    )
                 }
                 else if (key === "name") {
                     const paraElement = document.createElement("header")
