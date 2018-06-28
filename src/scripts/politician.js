@@ -23,7 +23,7 @@ const politician = Object.create({}, {
                             billHeading.textContent = "Sponsored Bills"
                             billSection.appendChild(billHeading)
                             let billDiv = document.createElement("div")
-                            let billHead = document.createElement("h4")
+                            let billHead = document.createElement("h5")
                             billHead.textContent = `${response["name"]}`
                             let billPointList = document.createElement("ul");
                             let billPointsLi = function () {
@@ -40,7 +40,36 @@ const politician = Object.create({}, {
                                 billSection.appendChild(billDiv)
                             })
                     politicianSection.appendChild(billSection)
-                } else if (key === "department") {
+                } else if (key === "pacId") {
+                    let pacSection = document.createElement("section")
+
+                    pacSection.className = "politician__pacs"
+
+                    let pacs = databaseCollection.getPAC(politician[key])
+                        .then((response) => {
+                            // console.log(response)
+                            let pacHeading = document.createElement("h4")
+                            pacHeading.textContent = "Related PACs"
+                            pacSection.appendChild(pacHeading)
+                            let pacDiv = document.createElement("div")
+                            let pacName = document.createElement("h5")
+                            pacName.textContent = `${response["name"]}`
+                            console.log(pacName)
+                            let pacPointList = document.createElement("ul");
+                            let pacPointsLi = function () {
+                                return document.createElement("li");
+                            }
+                            let pacPoints = response["pacPoints"];
+                            // pacPoints.forEach(element => {
+                            //     let pacPoint = pacPointsLi()
+                            //     pacPoint.textContent = element;
+                            //     pacPointList.appendChild(pacPoint)
+                            // });
+                                pacDiv.appendChild(pacName)
+                                pacDiv.appendChild(pacPointList)
+                                pacSection.appendChild(pacDiv)
+                            })
+                    politicianSection.appendChild(pacSection)
                 }
                 else if (key === "name") {
                     const paraElement = document.createElement("header")

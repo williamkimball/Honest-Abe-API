@@ -17,7 +17,7 @@ const databaseCollection = Object.create({}, {
     },
     "getPAC": {
         value: function (id) {
-            return $.ajax(`http://localhost:3000/Political%20Action%20Committee/${id}`)
+            return $.ajax(`http://localhost:3000/PoliticalActionCommittee/${id}`)
         }
     },
     "getPACorp": {
