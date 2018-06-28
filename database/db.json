@@ -1,0 +1,152 @@
+{
+    "Politician": [
+        {
+            "id": 1,
+            "name": "Gerald",
+            "billId": 4
+        },
+        {
+            "id": 2,
+            "name": "Ronaldo",
+            "billId": 3
+        },
+        {
+            "id": 3,
+            "name": "Gruntilda",
+            "billId": 1
+        },
+        {
+            "id": 4,
+            "name": "Harold",
+            "billId": 3
+        },
+        {
+            "id": 5,
+            "name": "Sharon",
+            "billId": 1
+        }
+    ],
+    "Legislative Bill": [
+        {
+            "id": 1,
+            "corpId": 2,
+            "name": "H.23423, Kids Need More Sleep",
+            "billPoints": ["Children Require at least 8 hours of sleep.", "Sleep helps with school."]
+        },
+        {
+            "id": 2,
+            "corpId": 2,
+            "name": "S.23433 Net Neutrality",
+            "billPoints": ["ISP's shouldn't be able to throttle data"]
+        },
+        {
+            "id": 3,
+            "corpId": 2,
+            "name": "H.897779 Electrification Denial",
+            "billPoints": ["Electric cars are much worse than gas, so consumers shouldn't be able to buy them", "This is definately in the best interest of the consumer, and not better for our huge corporation"]
+        },
+        {
+            "id": 4,
+            "corpId": 2,
+            "name": "S.398551 No More Tech",
+            "billPoints": ["Technology is evil and we want the government to make it go away"]
+        }
+    ],
+    "Donation": [
+        {
+            "id": 1,
+            "politician": 2,
+            "PAC": 4
+        },
+        {
+            "id": 2,
+            "politician": 1,
+            "PAC": 5
+        },
+        {
+            "id": 3,
+            "politician": 4,
+            "PAC": 3
+        },
+        {
+            "id": 4,
+            "politician": 1,
+            "PAC": 2
+        },
+        {
+            "id": 5,
+            "politician": 5,
+            "PAC": 1
+        }
+    ],
+    "Political Action Committee": [
+        {
+            "id": 1,
+            "name": "Society for New Things"
+        },
+        {
+            "id": 2,
+            "name": "Neo-Luddites"
+        },
+        {
+            "id": 3,
+            "name": "People for the Ethical Treatment of Corn"
+        },
+        {
+            "id": 4,
+            "name": "Harold's Bunch"
+        },
+        {
+            "id": 5,
+            "name": "Tech Countinuty Gathering"
+        }
+    ],
+    "PACCorp": [
+        {
+            "id": 1,
+            "PacId": 2,
+            "CorpId": 3,
+            "createdDate": "12/23/14",
+            "ammount": 123.21
+        },
+        {
+            "id": 2,
+            "PacId": 1,
+            "CorpId": 4,
+            "createdDate": "01/16/11",
+            "ammount": 125512
+        },
+        {
+            "id": 3,
+            "PacId": 3,
+            "CorpId": 1,
+            "createdDate": "04/1/05",
+            "ammount": 9877423
+        },
+        {
+            "id": 4,
+            "PacId": 1,
+            "CorpId": 2,
+            "createdDate": "8/9/12",
+            "ammount": 465372092
+        }
+    ],
+    "Corporation": [
+        {
+            "id": 1,
+            "name": "Unigen"
+        },
+        {
+            "id": 2,
+            "name": "ABC"
+        },
+        {
+            "id": 3,
+            "name": "General Electric"
+        },
+        {
+            "id": 4,
+            "name": "Nissan"
+        }
+    ]
+}
