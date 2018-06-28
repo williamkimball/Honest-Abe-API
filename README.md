@@ -1,25 +1,3 @@
-# Honest-Abe-API
-
-## Challenge: Follow the Money
-
-You need to design a database to represent the financial relationship between political candidates and corporate entities. Since corporations can contribute to political action committees (PAC), your job is to help see how politicians are being funded, and if that funding is directly translating into bills that politicians [sponsor](https://en.wikipedia.org/wiki/Sponsor_(legislative)).
-
-1. Politicians can receive donations from many PACs or SuperPACs.
-1. A legislative bill can be categorized to support a particular commercial interest.
-1. Corporations can donate to multiple PACs, on multiple dates.
-1. A bill can be sponsored by one, or more, politicians.
-1. PACs can make direct contributions to a political campaign.
-1. Corporations can have myriad interests for which they donate money to a PAC.
-
-The resources in this system are as follows:
-
-1. Politician
-1. Corporation
-1. Donation
-1. PoliticalActionCommittee
-1. LegislativeBill
-
-Create an ERD that visualizes the relationships between these resources. You will need to create some entities in addition to the ones listed above to build the correct relationships.
 
 ## Advanced Challenge: Honest Abe API
 
