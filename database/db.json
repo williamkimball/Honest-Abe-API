@@ -26,7 +26,7 @@
             "billId": 1
         }
     ],
-    "Legislative Bill": [
+    "LegislativeBill": [
         {
             "id": 1,
             "corpId": 2,
@@ -79,7 +79,7 @@
             "PAC": 1
         }
     ],
-    "Political Action Committee": [
+    "PoliticalActionCommittee": [
         {
             "id": 1,
             "name": "Society for New Things"

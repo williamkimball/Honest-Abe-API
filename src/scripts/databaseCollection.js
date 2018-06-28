@@ -1,18 +1,33 @@
 const $ = require ("jquery")
 const databaseCollection = Object.create({}, {
-    "getEmployee": {
+    "getPolitician": {
         value: function () {
-            return $.ajax("http://localhost:3000/employees")
+            return $.ajax("http://localhost:3000/Politician")
         }
     },
-    "getComp": {
+    "getBill": {
         value: function (id) {
-            return $.ajax(`http://localhost:3000/Computers/${id}`)
+            return $.ajax(`http://localhost:3000/LegislativeBill/${id}`)
         }
     },
-    "getDeparment": {
+    "getDonation": {
         value: function (id) {
-            return $.ajax(`http://localhost:3000/departments/${id}`)
+            return $.ajax(`http://localhost:3000/Donation/${id}`)
+        }
+    },
+    "getPAC": {
+        value: function (id) {
+            return $.ajax(`http://localhost:3000/Political%20Action%20Committee/${id}`)
+        }
+    },
+    "getPACorp": {
+        value: function (id) {
+            return $.ajax(`http://localhost:3000/PACCorp/${id}`)
+        }
+    },
+    "getCorp": {
+        value: function (id) {
+            return $.ajax(`http://localhost:3000/Corporation/${id}`)
         }
     },
 });

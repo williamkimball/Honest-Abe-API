@@ -1,10 +1,8 @@
-const database = require ("./databaseCollection")
-const employee = require("./employee")
+const Database = require ("./databaseCollection")
+const Politician = require("./politician")
 
 
-let employees = database.getEmployee()
-const contactList = require("./employeeList")
+let politician  = Database.getPolitician()
+const ContactList = require("./politicianList")
 
-contactList.buildemployeeList();
-
-// console.log(employees)
+ContactList.buildPoliticianList();
