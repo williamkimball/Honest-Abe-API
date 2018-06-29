@@ -1,5 +1,5 @@
 const $ = require("jquery")
-const databaseCollection = require("./databaseCollection")
+const databaseCollection = require("./database/databaseCollection")
 
 const politician = Object.create({}, {
     "createpoliticianComponent": {

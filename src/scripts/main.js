@@ -1,4 +1,4 @@
-const Database = require ("./databaseCollection")
+const Database = require ("./database/databaseCollection")
 const Politician = require("./politician")
 
 

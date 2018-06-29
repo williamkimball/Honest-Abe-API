@@ -1,4 +1,4 @@
-const politicianCollectionModule = require("./databaseCollection")
+const politicianCollectionModule = require("./database/databaseCollection")
 
 const politicianList = Object.create({}, {
     "buildPoliticianList": {
